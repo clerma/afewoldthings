@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Webpixels">
+    <title>Quick – Website UI Kit</title>
+    <!-- Preloader -->
+    <style>
+        @keyframes hidePreloader {
+            0% {
+                width: 100%;
+                height: 100%;
+            }
+
+            100% {
+                width: 0;
+                height: 0;
+            }
+        }
+
+        body>div.preloader {
+            position: fixed;
+            background: white;
+            width: 100%;
+            height: 100%;
+            z-index: 1071;
+            opacity: 0;
+            transition: opacity .5s ease;
+            overflow: hidden;
+            pointer-events: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        body:not(.loaded)>div.preloader {
+            opacity: 1;
+        }
+
+        body:not(.loaded) {
+            overflow: hidden;
+        }
+
+        body.loaded>div.preloader {
+            animation: hidePreloader .5s linear .5s forwards;
+        }
+    </style>
+    <script>
+        window.addEventListener("load", function() {
+            setTimeout(function() {
+                document.querySelector('body').classList.add('loaded');
+            }, 300);
+        });
+    </script>
+    <!-- Favicon -->
+    <link rel="icon" href="../../assets/img/brand/favicon.png" type="image/png"><!-- Font Awesome -->
+    <link rel="stylesheet" href="../../assets/libs/@fortawesome/fontawesome-free/css/all.min.css">
+    <!-- Quick CSS -->
+    <link rel="stylesheet" href="../../assets/css/quick-website.css" id="stylesheet">
+</head>
+
+<body>
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="spinner-border text-primary" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+    <div class="modal fade" tabindex="-1" role="dialog" id="modal-cookies" data-backdrop="false" aria-labelledby="modal-cookies" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-aside left-4 right-4 bottom-4">
+            <div class="modal-content bg-dark-dark">
+                <div class="modal-body">
+                    <!-- Text -->
+                    <p class="text-sm text-white mb-3">
+                        We use cookies so that our themes work for you. By using our website, you agree to our use of cookies.
+                    </p>
+                    <!-- Buttons -->
+                    <a href="../../pages/utility/terms.html" class="btn btn-sm btn-white" target="_blank">Learn more</a>
+                    <button type="button" class="btn btn-sm btn-primary mr-2" data-dismiss="modal">OK</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Omnisearch -->
+    <div id="omnisearch" class="omnisearch">
+        <div class="container">
+            <div class="omnisearch-container">
+                <!-- Search form -->
+                <form class="omnisearch-form">
+                    <div class="form-group">
+                        <div class="input-group input-group-merge input-group-flush">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"><i data-feather="search"></i></span>
+                            </div>
+                            <input type="text" class="form-control" placeholder="Type and hit enter ...">
+                        </div>
+                    </div>
+                </form>
+                <div class="omnisearch-suggestions">
+                    <h6 class="heading">Search Suggestions</h6>
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <ul class="list-unstyled mb-0">
+                                <li>
+                                    <a class="list-link" href="#">
+                                        <i data-feather="clock"></i>
+                                        <span>macbook pro</span> in Laptops
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="list-link" href="#">
+                                        <i data-feather="clock"></i>
+                                        <span>iphone 8</span> in Smartphones
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="list-link" href="#">
+                                        <i data-feather="clock"></i>
+                                        <span>macbook pro</span> in Laptops
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="list-link" href="#">
+                                        <i data-feather="clock"></i>
+                                        <span>beats pro solo 3</span> in Headphones
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="list-link" href="#">
+                                        <i data-feather="clock"></i>
+                                        <span>smasung galaxy 10</span> in Phones
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Main content -->
+    <!-- Go back -->
+    <a href="../../index.html" class="btn btn-neutral btn-icon-only rounded-circle position-absolute left-4 top-4 d-none d-lg-inline-flex" data-toggle="tooltip" data-placement="right" title="Go back">
+        <span class="btn-inner--icon">
+            <i data-feather="arrow-left"></i>
+        </span>
+    </a>
+    <section class="vh-100 d-flex align-items-center">
+        <div class="bg-danger position-absolute h-100 top-0 right-0 zindex-110 col-lg-6 col-xl-6 zindex-100 d-none d-lg-flex flex-column justify-content-end rounded-bottom-left" data-bg-size="cover" data-bg-position="center">
+            <!-- Cover image -->
+            <img src="../../assets/img/theme/light/img-v-error.jpg" alt="Image" class="img-as-bg  rounded-bottom-left">
+        </div>
+        <div class="container-fluid">
+            <div class="row align-items-center">
+                <div class="col-sm-7 col-lg-6 col-xl-6 mx-auto ml-lg-0">
+                    <div class="row justify-content-center">
+                        <div class="col-11 col-lg-10 col-xl-6 py-5">
+                            <h6 class="display-1 mb-3 font-weight-600 text-warning">Ooops!</h6>
+                            <p class="lead text-lg mb-5">
+                                Sorry, the page you are looking for could not be found.
+                            </p>
+                            <a href="../../index.html" class="btn btn-dark btn-icon hover-translate-y-n3">
+                                <span class="btn-inner--icon"><i data-feather="home"></i></span>
+                                <span class="btn-inner--text">Return home</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Core JS  -->
+    <script src="../../assets/libs/jquery/dist/jquery.min.js"></script>
+    <script src="../../assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../../assets/libs/svg-injector/dist/svg-injector.min.js"></script>
+    <script src="../../assets/libs/feather-icons/dist/feather.min.js"></script>
+    <!-- <script src="../../assets/libs/jquery.scrollbar/jquery.scrollbar.min.js"></script> -->
+    <!-- <script src="../../assets/libs/simplebar/dist/simplebar.min.js"></script> -->
+    <!-- Optional JS -->
+    <script src="../../assets/libs/in-view/dist/in-view.min.js"></script>
+    <script src="../../assets/libs/sticky-kit/dist/sticky-kit.min.js"></script>
+    <script src="../../assets/libs/imagesloaded/imagesloaded.pkgd.min.js"></script>
+    <!-- Quick JS -->
+    <script src="../../assets/js/quick-website.js"></script>
+    <!-- Feather Icons -->
+    <script>
+        feather.replace({
+            'width': '1em',
+            'height': '1em'
+        })
+    </script>
+</body>
+
+</html>
